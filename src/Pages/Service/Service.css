@@ -1,0 +1,27 @@
+.service {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.service button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+    background-color: rgb(101, 178, 214);
+    color: aliceblue;
+    font-weight: 600;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+} 
+
+.service button:hover {
+    background-color: rgb(69, 128, 156);
+    color: #fff;
+    transform: scale(1.03);
+    transition: 0.3s ease-in;
+} 
