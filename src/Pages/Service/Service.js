@@ -5,10 +5,10 @@ import './Service.css';
 import { useNavigate } from 'react-router-dom';
 
 const Service = ({ service }) => {
-    const { id, name, img, description, price } = service;
+    const { _id, name, img, description, price } = service;
     const navigate = useNavigate();
-    const navigateToServiceDetail = id => {
-        navigate(`/service/${id}`);
+    const navigateToServiceDetail = _id => {
+        navigate(`/service/${_id}`);
     }
     return (
         <div className='service bg-light'>
@@ -17,7 +17,7 @@ const Service = ({ service }) => {
             <h5 style={{ "color": "orange" }}>${price}</h5>
             <p><small>{description}</small></p>
             <p className='text-center'><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStarHalfStroke}></FontAwesomeIcon></p>
-            <button onClick={() => navigateToServiceDetail(id)} className='btn btn-success rounded-pill d-grid mx-auto'>Book {name}</button>
+            <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-success rounded-pill d-grid mx-auto'>Book {name}</button>
 
         </div>
     );

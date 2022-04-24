@@ -5,7 +5,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css';
 import SocialLogin from './SocialLogin';
-import car from '../../images/car.png';
 const Login = () => {
 
     const emailRef = useRef('');
@@ -22,7 +21,9 @@ const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
         auth
     );
-
+    if (loading || sending) {
+        return <p>Loading...</p>
+    }
     if (user) {
         navigate(from, { replace: true });
     }

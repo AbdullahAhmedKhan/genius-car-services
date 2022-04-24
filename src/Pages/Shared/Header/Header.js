@@ -27,6 +27,13 @@ const Header = () => {
                             <Link to="/experts">Experts</Link>
                         </Nav>
                         {
+                            
+                            user && <Nav className='me-auto menu-bar'>
+                            <Link to="/addservice">Add Service</Link>
+                            <Link to="/manage">Manage</Link>
+                            </Nav>
+                        }
+                        {
                             user?
                             <button className='btn btn-outline-light rounded-pill border-3' onClick={handleSignOut}>Logout</button>
                             :
